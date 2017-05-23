@@ -1,5 +1,5 @@
 # Add the following line to your ~/.zshrc and remove everything else
-# source $HOME/Development/dev-tools/bash/zshrc
+# source $HOME/Development/dev-tools/settings/zsh/zshrc
 
 PATH="/Applications/MongoDB.app/Contents/Resources/Vendor/mongodb:$PATH"
 
