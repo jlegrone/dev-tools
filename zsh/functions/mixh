@@ -1,0 +1,7 @@
+function mixh {
+	if [ $# -ge 1 ]; then
+		mix help | grep -i $1
+	else
+		mix help
+	fi
+}

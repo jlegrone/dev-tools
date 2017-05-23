@@ -1,0 +1,40 @@
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  required = true
+[user]
+  name = Jacob LeGrone
+  email = git@jacoblegrone.com
+[core]
+  excludesfile = ~/Development/dev-tools/settings/git/gitignore
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+[push]
+  default = simple
+[alias]
+  # one-line log
+  l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+
+  aliases = "!git config -l | grep alias | cut -c 7-"
+  contains = branch -a --contains
+  up = pull --rebase --autostash
+  s = status -s
+  co = checkout
+  cb = checkout -b
+  rb = rebase
+
+  ac = !git add . && git commit -am
+  wip = !git ac "WIP"
+  undo = reset --soft HEAD~1
+  amend = !git add . && git commit --amend --no-edit
+  rename = !git branch -m
+
+  # Get the current branch name (not so useful in itself, but used in
+  # other aliases)
+  branch-name = "!git rev-parse --abbrev-ref HEAD"
+  # Push the current branch to the remote "origin", and set it to track
+  # the upstream branch
+  publish = "!git push -u origin $(git branch-name)"
+  # Delete the remote version of the current branch
+  unpublish = "!git push origin :$(git branch-name)"

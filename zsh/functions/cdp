@@ -1,0 +1,7 @@
+function cdp {
+	if [ $# -ge 1 ]; then
+		cd $WORKSPACE/$1
+	else
+		cd $WORKSPACE
+	fi
+}
