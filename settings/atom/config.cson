@@ -1,0 +1,55 @@
+"*":
+  "atom-beautify":
+    css:
+      beautify_on_save: true
+    general:
+      analytics: false
+      beautifyEntireFileOnSave: false
+    handlebars:
+      beautify_on_save: true
+      default_beautifier: "Pretty Diff"
+    js:
+      disabled: true
+    json:
+      beautify_on_save: true
+    jsx:
+      beautify_on_save: true
+    sass:
+      beautify_on_save: true
+    scss:
+      beautify_on_save: true
+      convert_quotes: "double"
+      default_beautifier: "SassConvert"
+      no_lead_zero: true
+      preserve_newlines: true
+  core:
+    disabledPackages: [
+      "wrap-guide"
+      "markdown-preview"
+      "atom-handlebars"
+      "atom-beautify"
+    ]
+    packagesWithKeymapsDisabled: []
+    projectHome: "/Users/jlegrone/Development"
+    telemetryConsent: "no"
+    titleBar: "custom"
+  editor:
+    fontSize: 16
+    invisibles: {}
+    showInvisibles: true
+    softWrap: true
+    tabType: "soft"
+  "exception-reporting":
+    userId: "81beee58-9d81-3500-f155-ff1afb90be0e"
+  "git-blame":
+    columnWidth: 330
+  "language-babel": {}
+  linter:
+    lintOnChange: false
+    lintOnOpen: false
+    lintPreviewTabs: false
+  "linter-eslint":
+    fixOnSave: true
+  "linter-ui-default": {}
+  welcome:
+    showOnStartup: false

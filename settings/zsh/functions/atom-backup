@@ -1,0 +1,9 @@
+#!/bin/bash
+
+function atom-backup {
+  # Back up files in atom config directory, ignoring subdirectories
+  rsync -av -f"- */" -f"+ *" ~/.atom/ $DEV_TOOLS/settings/atom
+
+  # Save list of currently installed atom packages
+  apm list --installed --bare > $DEV_TOOLS/settings/atom/package-list.txt
+}

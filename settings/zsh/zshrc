@@ -6,7 +6,7 @@ PATH="/Applications/MongoDB.app/Contents/Resources/Vendor/mongodb:$PATH"
 DEFAULT_USER=$USER
 WORKSPACE=$HOME/Development
 DEV_TOOLS=$WORKSPACE/dev-tools
-FUNCTIONS=$DEV_TOOLS/zsh/functions
+FUNCTIONS=$DEV_TOOLS/settings/zsh/functions
 
 source $FUNCTIONS/index
 
