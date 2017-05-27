@@ -1,3 +1,5 @@
+#!/bin/bash
+
 function cdp {
 	if [ $# -ge 1 ]; then
 		cd $WORKSPACE/$1
