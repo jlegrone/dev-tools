@@ -14,4 +14,6 @@ After install, run commands
 ```
 $ create-zsh-symlinks
 $ atom-restore
+$ brew install caskroom/cask/xquartz
+$ brew install caskroom/cask/meld
 ```
