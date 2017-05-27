@@ -3584,13 +3584,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.15294118225574493</real>
+				<real>0.038884323090314865</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.12941177189350128</real>
+				<real>0.03888365626335144</real>
 				<key>Red Component</key>
-				<real>0.11764705926179886</real>
+				<real>0.038884811103343964</real>
 			</dict>
 			<key>Badge Color</key>
 			<dict>
@@ -4043,13 +4043,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.43921568989753723</real>
+				<real>0.57570546865463257</real>
 				<key>Color Space</key>
 				<string>Calibrated</string>
 				<key>Green Component</key>
-				<real>0.38823530077934265</real>
+				<real>0.42002904415130615</real>
 				<key>Red Component</key>
-				<real>0.36078432202339172</real>
+				<real>0.34972822666168213</real>
 			</dict>
 			<key>Send Code When Idle</key>
 			<false/>
@@ -4157,7 +4157,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-05-21T02:06:43Z</date>
+	<date>2017-05-27T01:48:00Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>ShowBookmarkName</key>
