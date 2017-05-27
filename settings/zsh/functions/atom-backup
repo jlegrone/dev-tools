@@ -7,3 +7,11 @@ function atom-backup {
   # Save list of currently installed atom packages
   apm list --installed --bare > $DEV_TOOLS/settings/atom/package-list.txt
 }
+
+function atom-restore {
+  # Write atom directory contents to config directory
+  rsync -av $DEV_TOOLS/settings/atom/ ~/.atom
+
+  # Install atom packages
+  apm install --packages-file ~/.atom/package-list.txt
+}
