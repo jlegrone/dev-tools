@@ -8,3 +8,10 @@
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh#basic-installation)
 - [iTerm](https://www.iterm2.com/)
 - [atom](https://atom.io/)
+
+After install, run commands
+
+```
+$ create-zsh-symlinks
+$ atom-restore
+```

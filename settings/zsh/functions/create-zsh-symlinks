@@ -1,0 +1,5 @@
+#!/bin/bash
+
+function create-zsh-symlinks {
+  ln -s $DEV_TOOLS/settings/zsh/themes/* ~/.oh-my-zsh/themes/
+}
