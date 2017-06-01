@@ -120,8 +120,7 @@ get_space () {
   echo $SPACES
 }
 
-# _1LEFT="$_PATH $(nvm_prompt_info)"
-_1LEFT="%F{black}$_USERNAME%f$_PATH"
+_1LEFT="%F{black}$_USERNAME%f$_PATH $(nvm_prompt_info)"
 _1RIGHT="%* "
 # _1RIGHT="%F{black}$_USERNAME%f %* "
 
