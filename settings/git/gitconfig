@@ -29,6 +29,8 @@
   co = checkout
   cb = checkout -b
   rb = rebase
+  start = "!sh -c \"git checkout develop && git up && git cb feature/$1\" -"
+  hotfix = "!sh -c \"git checkout master && git up && git cb hotfix/$1\" -"
 
   ac = !git add . && git commit -am
   wip = !git ac "WIP"
