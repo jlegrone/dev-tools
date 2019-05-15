@@ -83,9 +83,13 @@ bureau_git_prompt () {
   echo $_result
 }
 
+k8s_prompt() {
+  echo $ZSH_KUBECTL_PROMPT
+}
+
 _PATH="%{$fg_bold[cyan]%}%~%{$reset_color%}"
 
-_USERNAME="%{$fg[green]%}%n%{$reset_color%}@"
+_USERNAME="%{$fg[green]%}%n%{$reset_color%}"
 if [ "$USER" = "$USER_TO_OVERRIDE" ]; then
   _USERNAME="$USER_OVERRIDE"
 fi
@@ -93,7 +97,7 @@ _HOSTNAME=$(hostname -f)
 if [ "$_HOSTNAME" = "$HOST_TO_OVERRIDE" ]; then
   _HOSTNAME="$HOST_OVERRIDE"
 else
-  _HOSTNAME="%{$fg[green]%}%m%{$reset_color%} "
+  _HOSTNAME="%{$fg[green]%}%m%{$reset_color%}"
 fi
 
 if [[ $EUID -eq 0 ]]; then
@@ -101,8 +105,8 @@ if [[ $EUID -eq 0 ]]; then
 else
   _LIBERTY="%{$fg[yellow]%}$"
 fi
-_USERNAME="$_USERNAME$_HOSTNAME"
-_LIBERTY="$_LIBERTY%{$reset_color%}"
+# _USERNAME="$_USERNAME$_HOSTNAME"
+# _LIBERTY="$_LIBERTY%{$reset_color%}"
 
 get_space () {
   local STR=$1$2
@@ -120,20 +124,21 @@ get_space () {
   echo $SPACES
 }
 
-_1LEFT="%F{black}$_USERNAME%f$_PATH $(nvm_prompt_info)"
+_1LEFT="$_PATH"
 _1RIGHT="%* "
 # _1RIGHT="%F{black}$_USERNAME%f %* "
 
 bureau_precmd () {
   _1SPACES=`get_space $_1LEFT $_1RIGHT " "`
-  print -P '%F{black}`get_space "" " " "-"`%f'
+  # print -P '%F{black}`get_space "" " " "-"`%f'
   print -rP "$_1LEFT$_1SPACES$_1RIGHT"
 }
 
 setopt prompt_subst
 PROMPT='$_LIBERTY '
 # RPROMPT='$(nvm_prompt_info) $(bureau_git_prompt)'
-RPROMPT='$(bureau_git_prompt)'
+# RPROMPT='$(bureau_git_prompt)'
+RPROMPT='$_USERNAME@$_HOSTNAME'
 
 autoload -U add-zsh-hook
 add-zsh-hook precmd bureau_precmd
